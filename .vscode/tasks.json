@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build blink",
+			"type": "shell",
+			"command": "cmake -S .\\FSBL -B .\\build\\blink -G Ninja -DCMAKE_TOOLCHAIN_FILE=E:\\chaos-air\\gcc-arm-none-eabi.cmake -DCMAKE_BUILD_TYPE=Debug; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; cmake --build .\\build\\blink; exit $LASTEXITCODE",
+			"options": {
+				"cwd": "${workspaceFolder}",
+				"shell": {
+					"executable": "powershell.exe",
+					"args": ["-NoProfile", "-Command"]
+				}
+			},
+			"isBackground": false,
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build"
+		}
+	]
+}

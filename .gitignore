@@ -1,0 +1,6 @@
+build
+mx.scratch
+__pycache__/
+*.py[cod]
+CMakeUserPresets.json
+/Secure_nsclib/secure_nsclib.o
